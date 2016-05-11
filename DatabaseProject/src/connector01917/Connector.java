@@ -33,7 +33,7 @@ public class Connector
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		
 		// get Connection-object via DriverManager
-		return (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/virksomhed", "root", "");
+		return (Connection) DriverManager.getConnection(url, username, password);
 	}
 	
 	private static Connection conn;
