@@ -23,8 +23,7 @@ public class ProduktBatchTest {
 		try {
 			recept.createRecept(new ReceptDTO(1, "Test recept"));
 			pbd1 = new ProduktBatchDTO(1, 0, 1);
-			try { pb.createProduktBatch(pbd1);
-			} catch (DALException e) { System.out.println(e.getMessage()); }
+			pb.createProduktBatch(pbd1);
 		} catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		System.out.println("Opdatering af produktbatch");

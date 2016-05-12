@@ -23,8 +23,7 @@ public class RaavareBatchTest {
 		try {
 			raavare.createRaavare(new RaavareDTO(1, "Ost", "Ostehuset"));
 			rbd1 = new RaavareBatchDTO(1, 1, 42.0);
-			try { rb.createRaavareBatch(rbd1);
-			} catch (DALException e) { System.out.println(e.getMessage()); }
+			rb.createRaavareBatch(rbd1);
 		} catch (DALException e) { System.out.println(e.getMessage()); }
 		
 		System.out.println("Opdatering af raavarebatch");
