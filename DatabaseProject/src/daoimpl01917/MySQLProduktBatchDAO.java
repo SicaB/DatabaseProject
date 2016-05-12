@@ -8,7 +8,6 @@ import java.util.List;
 import connector01917.Connector;
 import daointerfaces01917.DALException;
 import daointerfaces01917.ProduktBatchDAO;
-import dto01917.OperatoerDTO;
 import dto01917.ProduktBatchDTO;
 
 public class MySQLProduktBatchDAO implements ProduktBatchDAO {
@@ -47,7 +46,7 @@ public class MySQLProduktBatchDAO implements ProduktBatchDAO {
 	public void updateProduktBatch(ProduktBatchDTO produktbatch) throws DALException {
 		Connector.doUpdate(
 				"UPDATE produktbatch SET status = " + produktbatch.getStatus() + ", recept_id = " + produktbatch.getReceptId() + 
-				"WHERE pb_id = " + produktbatch.getPbId());
+				" WHERE pb_id = " + produktbatch.getPbId());
 	}
 
 }

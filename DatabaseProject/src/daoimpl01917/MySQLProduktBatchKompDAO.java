@@ -8,7 +8,6 @@ import java.util.List;
 import connector01917.Connector;
 import daointerfaces01917.DALException;
 import daointerfaces01917.ProduktBatchKompDAO;
-import dto01917.ProduktBatchDTO;
 import dto01917.ProduktBatchKompDTO;
 
 public class MySQLProduktBatchKompDAO implements ProduktBatchKompDAO {
@@ -65,7 +64,7 @@ public class MySQLProduktBatchKompDAO implements ProduktBatchKompDAO {
 		Connector.doUpdate(
 				"UPDATE produktbatchkomponent SET tara = " + produktbatchkomponent.getTara() + ", netto = " +
 						produktbatchkomponent.getNetto() + ", opr_id = " + produktbatchkomponent.getOprId() +
-				"WHERE pb_id = " + produktbatchkomponent.getPbId() + " AND rb_id = " + produktbatchkomponent.getRbId());
+				" WHERE pb_id = " + produktbatchkomponent.getPbId() + " AND rb_id = " + produktbatchkomponent.getRbId());
 	}
 
 }
