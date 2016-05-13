@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,7 +22,6 @@ import dto01917.ProduktBatchKompDTO;
 import dto01917.RaavareBatchDTO;
 import dto01917.RaavareDTO;
 import dto01917.ReceptDTO;
-import junit.framework.Assert;
 
 public class ProduktBatchKompTest {
 	MySQLReceptDAO recept;
@@ -71,7 +71,7 @@ public class ProduktBatchKompTest {
 		} catch (DALException e) {
 			Assert.fail("Fail to create objects, error message: " + e.getMessage());
 		}
-		System.out.println("Opdatering af produktbatchkomponent");
+		// Opdatering af produktbatchkomponent
 		pbkDTO.setNetto(0.0);
 		pbkDTO.setTara(0.0);
 		try {
