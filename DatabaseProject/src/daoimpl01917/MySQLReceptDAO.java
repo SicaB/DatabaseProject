@@ -39,13 +39,13 @@ public class MySQLReceptDAO implements ReceptDAO {
 	public void createRecept(ReceptDTO recept) throws DALException {
 		Connector.doUpdate(
 				"INSERT INTO recept(recept_id, recept_navn) VALUES " +
-				"(" + recept.getReceptId() + ", " + recept.getReceptNavn() + ")");
+				"(" + recept.getReceptId() + ", '" + recept.getReceptNavn() + "')");
 	}
 
 	@Override
 	public void updateRecept(ReceptDTO recept) throws DALException {
 		Connector.doUpdate(
-				"UPDATE recept SET recept_navn = " + recept.getReceptNavn() + " WHERE recept_id = " + recept.getReceptId());
+				"UPDATE recept SET recept_navn = '" + recept.getReceptNavn() + "' WHERE recept_id = " + recept.getReceptId());
 		
 	}
 

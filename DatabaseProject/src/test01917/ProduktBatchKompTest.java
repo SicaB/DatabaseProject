@@ -61,12 +61,12 @@ public class ProduktBatchKompTest {
 	public void testUpdate() {
 		// Indsaettelse af nyt produktbatchkomponent rbid = 1, pbid = 1
 		try {
-			raavare.createRaavare(new RaavareDTO(1, "Ost", "Ostehuset"));
-			recept.createRecept(new ReceptDTO(1, "All Might"));
-			rb.createRaavareBatch(new RaavareBatchDTO(1, 1, 200.9));
-			pb.createProduktBatch(new ProduktBatchDTO(1, 0, 1));
-			opr.createOperatoer(new OperatoerDTO(15, "Overpowered", "OP", "000000-0001", "DTUstandard666"));
-			pbkDTO = new ProduktBatchKompDTO(1, 1, 50.0, 57.2, 15);
+			raavare.createRaavare(new RaavareDTO(11, "Ost", "Ostehuset"));
+			recept.createRecept(new ReceptDTO(11, "All Might"));
+			rb.createRaavareBatch(new RaavareBatchDTO(11, 11, 200.9));
+			pb.createProduktBatch(new ProduktBatchDTO(11, 0, 1));
+			opr.createOperatoer(new OperatoerDTO(11, "Overpowered", "OP", "000000-0001", "DTUstandard666"));
+			pbkDTO = new ProduktBatchKompDTO(11, 11, 50.0, 57.2, 15);
 			pbk.createProduktBatchKomp(pbkDTO);
 		} catch (DALException e) {
 			Assert.fail("Fail to create objects, error message: " + e.getMessage());
@@ -86,8 +86,8 @@ public class ProduktBatchKompTest {
 		// Indsaettelse af nyt produktbatchkomponent rbid = 2, pbid = 1
 		try {
 			raavare.createRaavare(new RaavareDTO(10, "Ukendt", "Uranus"));
-			rb.createRaavareBatch(new RaavareBatchDTO(2, 10, 2.1));
-			pbkDTO = new ProduktBatchKompDTO(1, 2, 99.9, 0.1, 15);
+			rb.createRaavareBatch(new RaavareBatchDTO(10, 10, 2.1));
+			pbkDTO = new ProduktBatchKompDTO(10, 10, 99.9, 0.1, 15);
 			pbk.createProduktBatchKomp(pbkDTO);
 		} catch (DALException e) {
 			Assert.fail("Fail to create objects, error message: " + e.getMessage());
@@ -107,8 +107,8 @@ public class ProduktBatchKompTest {
 	public void testRetrieveListByPbIdAndRbId() {
 		try {
 			raavare.createRaavare(new RaavareDTO(10, "Ukendt", "Uranus"));
-			rb.createRaavareBatch(new RaavareBatchDTO(2, 10, 2.1));
-			pbkDTO = new ProduktBatchKompDTO(1, 2, 99.9, 0.1, 15);
+			rb.createRaavareBatch(new RaavareBatchDTO(10, 10, 2.1));
+			pbkDTO = new ProduktBatchKompDTO(10, 10, 99.9, 0.1, 15);
 			pbk.createProduktBatchKomp(pbkDTO);
 		} catch (DALException e) {
 			Assert.fail("Fail to create objects, error message: " + e.getMessage());
@@ -125,8 +125,8 @@ public class ProduktBatchKompTest {
 	public void testRetrieveList() {
 		try {
 			raavare.createRaavare(new RaavareDTO(10, "Ukendt", "Uranus"));
-			rb.createRaavareBatch(new RaavareBatchDTO(2, 10, 2.1));
-			pbkDTO = new ProduktBatchKompDTO(1, 2, 99.9, 0.1, 15);
+			rb.createRaavareBatch(new RaavareBatchDTO(10, 10, 2.1));
+			pbkDTO = new ProduktBatchKompDTO(10, 10, 99.9, 0.1, 15);
 			pbk.createProduktBatchKomp(pbkDTO);
 		} catch (DALException e) {
 			Assert.fail("Fail to create objects, error message: " + e.getMessage());
